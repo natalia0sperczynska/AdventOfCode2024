@@ -1,11 +1,11 @@
 
-val inputFilePath2 = "src/input"
+val inputFilePathDay3_2 = "src/test_input_day3_part2"
 
 fun main() {
     val regex = "mul\\((\\d{1,3}),(\\d{1,3})\\)".toRegex()
-    val input = prepare(inputFilePath2)
+    val input = prepare(inputFilePathDay3_2)
 
-    //val matchResult = regex.findAll(input)
+    //val matchResult = regex.findAll(test_input_day6)
 
     //val results = matchResult.map { it.value }.toList()
     //println(results)
@@ -47,5 +47,5 @@ fun main() {
     println(finalResult)
 }
 //^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$
-//expect fun splitToSequence(input: CharSequence, limit: Int = 0): Sequence<String>
-//expect fun findAll(input: CharSequence, startIndex: Int = 0): Sequence<MatchResult>
+//expect fun splitToSequence(test_input_day6: CharSequence, limit: Int = 0): Sequence<String>
+//expect fun findAll(test_input_day6: CharSequence, startIndex: Int = 0): Sequence<MatchResult>

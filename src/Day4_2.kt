@@ -43,7 +43,7 @@ fun checkXMAS(array: Array<CharArray>, indexX: Int, indexY: Int): Boolean {
 }
 
 fun main() {
-    val inputArray = prepareToCharArray("src/input")
+    val inputArray = prepareToCharArray("src/test_input_day4")
 
 //    inputArray.forEach { row ->
 //        println(row.joinToString(""))

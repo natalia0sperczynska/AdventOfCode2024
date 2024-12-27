@@ -1,5 +1,5 @@
 import java.io.File
-val inputFilePathDay4 = "src/input"
+val inputFilePathDay4 = "src/test_input_day4"
 
 val input="....XXMAS.\n" +
         ".SAMXMS...\n" +

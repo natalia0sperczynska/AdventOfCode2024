@@ -1,6 +1,6 @@
 import java.io.File
 
-val inputFilePathDay5="src/input"
+val inputFilePathDay5="src/test_input_day5"
 
 fun prepareToString(filePath:String):String{
     var input=StringBuilder()

@@ -1,6 +1,6 @@
 import java.io.File
 
-//val inputFilePath = "src/input"
+val inputFilePathDay3 = "src/test_input_day3"
 fun prepare(filePath:String):String{
     var input=StringBuilder()
     File(filePath).useLines { lines ->
@@ -23,7 +23,7 @@ fun mulAndAdd(matches:Sequence<MatchResult>):Int{
 fun main() {
     val regex = "mul\\((\\d{1,3}),(\\d{1,3})\\)".toRegex()
 
-    val matchResult=regex.findAll(prepare(inputFilePath2))
+    val matchResult=regex.findAll(prepare(inputFilePathDay3))
 
     val results = matchResult.map { it.value }.toList()
     println(results)
@@ -31,5 +31,5 @@ fun main() {
 
 }
 //^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$
-//expect fun splitToSequence(input: CharSequence, limit: Int = 0): Sequence<String>
-//expect fun findAll(input: CharSequence, startIndex: Int = 0): Sequence<MatchResult>
+//expect fun splitToSequence(test_input_day6: CharSequence, limit: Int = 0): Sequence<String>
+//expect fun findAll(test_input_day6: CharSequence, startIndex: Int = 0): Sequence<MatchResult>

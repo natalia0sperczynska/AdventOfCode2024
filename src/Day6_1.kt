@@ -1,5 +1,5 @@
 
-val inputFilePathDay6="src/input"
+val inputFilePathDay6="src/test_input_day6"
 val str="....#.....\n" +
         ".........#\n" +
         "..........\n" +

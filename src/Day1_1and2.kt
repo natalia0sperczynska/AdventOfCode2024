@@ -1,13 +1,12 @@
 import java.io.File
-import kotlin.math.abs
 
 fun main() {
-    val inputFilePath = "src/input"
+    val inputFilePathDay1 = "src/test_input_day1"
     var leftNum = mutableListOf<Int>()
     var rightNum = mutableListOf<Int>()
     var result=0
 
-    File(inputFilePath).useLines { lines ->
+    File(inputFilePathDay1).useLines { lines ->
         for (line in lines) {
             val numbers = line.trim().split("\\s+".toRegex()).map { it.toInt() }
             if (numbers.size == 2) {

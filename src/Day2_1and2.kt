@@ -41,9 +41,9 @@ fun modifySafeCheck(sequence: String):Boolean{
 
 }
 fun main() {
-    val inputFilePath = "src/input"
+    val inputFilePathDay2 = "src/test_input_day2"
     var safe = 0
-    File(inputFilePath).useLines { lines ->
+    File(inputFilePathDay2).useLines { lines ->
         for (line in lines) {
             val sequence = line.trim()
             if (modifySafeCheck(sequence))
