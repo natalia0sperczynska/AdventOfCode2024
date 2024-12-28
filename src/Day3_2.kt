@@ -1,5 +1,6 @@
 
 val inputFilePathDay3_2 = "src/test_input_day3_part2"
+val inpu="xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))"
 
 fun main() {
     val regex = "mul\\((\\d{1,3}),(\\d{1,3})\\)".toRegex()
@@ -20,27 +21,27 @@ fun main() {
 
 
     while (index < input.length) {
-        when { (regexDo.find(input, index) != null) -> {
-            multiply = true
-            index = regexDo.find(input, index)!!.range.last + 1
-        }
-            regexDont.find(input, index) != null -> {
+        when {
+            regexDo.find(input, index)?.range?.first == index -> {
+                multiply = true
+                index = regexDo.find(input, index)!!.range.last + 1
+            }
+
+            regexDont.find(input, index)?.range?.first == index -> {
                 multiply = false
                 index = regexDont.find(input, index)!!.range.last + 1
             }
-            multiply -> {
-                val matchResult = regex.findAll(input, index)
 
-                if (matchResult.toList().isNotEmpty()) {
-                    finalResult += mulAndAdd(matchResult)
-                    index = matchResult.last().range.last + 1
-                } else {
-                    index++
+            regex.find(input, index)?.range?.first == index -> {
+                if (multiply) {
+                    val match = regex.find(input, index)!!
+                    val (x, y) = match.destructured
+                    finalResult += x.toInt() * y.toInt()
                 }
+                index = regex.find(input, index)!!.range.last + 1
             }
-            else -> {
-                index++
-            }
+
+            else -> index++
         }
     }
 
