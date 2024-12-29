@@ -1,3 +1,5 @@
+package day4
+
 fun prepareToCharArray(filepath: String): Array<CharArray> {
     val inputList = prepareToList(filepath)
     return inputList.map { it.toCharArray() }.toTypedArray()
@@ -43,7 +45,7 @@ fun checkXMAS(array: Array<CharArray>, indexX: Int, indexY: Int): Boolean {
 }
 
 fun main() {
-    val inputArray = prepareToCharArray("src/test_input_day4")
+    val inputArray = prepareToCharArray("src/day4/test_input_day4")
 
 //    inputArray.forEach { row ->
 //        println(row.joinToString(""))

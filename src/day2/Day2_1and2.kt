@@ -1,3 +1,5 @@
+package day2
+
 import java.io.File
 import kotlin.math.abs
 
@@ -41,7 +43,7 @@ fun modifySafeCheck(sequence: String):Boolean{
 
 }
 fun main() {
-    val inputFilePathDay2 = "src/test_input_day2"
+    val inputFilePathDay2 = "src/day2/test_input_day2"
     var safe = 0
     File(inputFilePathDay2).useLines { lines ->
         for (line in lines) {

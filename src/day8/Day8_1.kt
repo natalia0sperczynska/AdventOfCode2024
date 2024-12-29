@@ -1,5 +1,9 @@
+package day8
 
-val inputFilePathDay8="src/test_input_day8"
+import day4.prepareToList
+import day6.Coordinate
+
+val inputFilePathDay8="src/day8/test_input_day8"
 val str8="............\n" +
         "........0...\n" +
         ".....0......\n" +
@@ -35,7 +39,7 @@ fun getAntennas(input: List<String>): Map<Char, MutableSet<Coordinate>> {
 fun getDistance(a: Coordinate, b: Coordinate): Coordinate {
     return Coordinate(a.x - b.x, a.y - b.y)
 }
-fun multiply(a:Coordinate, scalar:Int):Coordinate{
+fun multiply(a: Coordinate, scalar:Int): Coordinate {
     return Coordinate(a.x*scalar,a.y*scalar)
 }
 fun add(a: Coordinate, b: Coordinate): Coordinate {
@@ -67,8 +71,8 @@ fun findAntinodes(antenasWithCoordinates:Map<Char,Set<Coordinate>>, grid: List<S
 }
 fun main() {
     val stringListOfLines = prepareToList(inputFilePathDay8)
-    val antenasWithCoordinates=getAntennas(stringListOfLines)
-    val finalResul=findAntinodes(antenasWithCoordinates,stringListOfLines)
+    val antenasWithCoordinates= getAntennas(stringListOfLines)
+    val finalResul= findAntinodes(antenasWithCoordinates,stringListOfLines)
     println("${finalResul.size}")
 }
 

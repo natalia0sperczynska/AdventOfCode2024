@@ -1,5 +1,8 @@
+package day7
+
+import day5.prepareToString
 import kotlin.math.pow
-val inputFilePathDay7="src/test_input_day7"
+val inputFilePathDay7="src/day7/test_input_day7"
 
 class Equation(val answer: Int, val parts: List<Int>)
 
@@ -76,7 +79,7 @@ fun main() {
             "21037: 9 7 18 13\n" +
             "292: 11 6 16 20"
 
-    val input=prepareToString(inputFilePathDay7)
+    val input= prepareToString(inputFilePathDay7)
     val result = getTheSum(input)
     println(result)
 }

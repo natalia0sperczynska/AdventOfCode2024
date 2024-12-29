@@ -1,6 +1,8 @@
+package day3
+
 import java.io.File
 
-val inputFilePathDay3 = "src/test_input_day3"
+val inputFilePathDay3 = "src/day3/test_input_day3"
 fun prepare(filePath:String):String{
     var input=StringBuilder()
     File(filePath).useLines { lines ->

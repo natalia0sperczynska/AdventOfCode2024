@@ -1,5 +1,7 @@
+package day4
+
 import java.io.File
-val inputFilePathDay4 = "src/test_input_day4"
+val inputFilePathDay4 = "src/day4/test_input_day4"
 
 val input="....XXMAS.\n" +
         ".SAMXMS...\n" +
@@ -110,17 +112,17 @@ fun main(){
     println(inputList)
 
     var sumHorizotnal=0
-    sumHorizotnal = xmasCountHorizontal(inputList,regexXmas)+xmasCountHorizontal(inputList,regexSamx)
+    sumHorizotnal = xmasCountHorizontal(inputList,regexXmas) + xmasCountHorizontal(inputList,regexSamx)
 
     println(sumHorizotnal)
 
     var sumVerical=0
-    sumVerical = xmasCountVertical(inputList,regexXmas)+xmasCountVertical(inputList,regexSamx)
+    sumVerical = xmasCountVertical(inputList,regexXmas) + xmasCountVertical(inputList,regexSamx)
 
     println(sumVerical)
 
     var sumDiagonal=0
-    sumDiagonal = xmasCountDiagonal(inputList,regexXmas)+xmasCountDiagonal(inputList,regexSamx)
+    sumDiagonal = xmasCountDiagonal(inputList,regexXmas) + xmasCountDiagonal(inputList,regexSamx)
 
     println(sumDiagonal)
     println(totalSum(sumDiagonal,sumVerical,sumHorizotnal))

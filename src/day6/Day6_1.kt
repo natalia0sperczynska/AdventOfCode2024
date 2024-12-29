@@ -1,5 +1,8 @@
+package day6
 
-val inputFilePathDay6="src/test_input_day6"
+import day4.prepareToCharArray
+
+val inputFilePathDay6="src/day6/test_input_day6"
 val str6="....#.....\n" +
         ".........#\n" +
         "..........\n" +
@@ -24,7 +27,7 @@ data class Coordinate(var x:Int,var y:Int){
         return "coordinates=(${x},${y})"
     }
 }
-class LaboratoryGuard(var position: Coordinate, var direction:Direction)
+class LaboratoryGuard(var position: Coordinate, var direction: Direction)
 fun Array<CharArray>.toIntArrayWithCoordinates(guard: LaboratoryGuard): Pair<Array<IntArray>, MutableList<Pair<Int, Int>>> {
     val intArray = Array(this.size) { IntArray(this[0].size) }
     val coordinates = mutableListOf<Pair<Int, Int>>()
