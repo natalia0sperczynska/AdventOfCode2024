@@ -1,6 +1,6 @@
 
 val inputFilePathDay6="src/test_input_day6"
-val str="....#.....\n" +
+val str6="....#.....\n" +
         ".........#\n" +
         "..........\n" +
         "..#.......\n" +
@@ -19,7 +19,11 @@ enum class Direction(val dx: Int, val dy: Int) {
     fun turnRight(): Direction = values()[(ordinal + 1) % values().size]
 }
 
-class Coordinate(var x:Int,var y:Int)
+data class Coordinate(var x:Int,var y:Int){
+    override fun toString(): String {
+        return "coordinates=(${x},${y})"
+    }
+}
 class LaboratoryGuard(var position: Coordinate, var direction:Direction)
 fun Array<CharArray>.toIntArrayWithCoordinates(guard: LaboratoryGuard): Pair<Array<IntArray>, MutableList<Pair<Int, Int>>> {
     val intArray = Array(this.size) { IntArray(this[0].size) }

@@ -1,7 +1,9 @@
+package days
+
 import java.io.File
 
 fun main() {
-    val inputFilePathDay1 = "src/test_input_day1"
+    val inputFilePathDay1 = "src/test_inputs/test_input_day1"
     var leftNum = mutableListOf<Int>()
     var rightNum = mutableListOf<Int>()
     var result=0
