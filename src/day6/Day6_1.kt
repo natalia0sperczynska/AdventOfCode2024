@@ -26,6 +26,12 @@ data class Coordinate(var x:Int,var y:Int){
     override fun toString(): String {
         return "coordinates=(${x},${y})"
     }
+    fun neighbors() = listOf(
+        Coordinate(x, y - 1),
+        Coordinate(x, y + 1),
+        Coordinate(x - 1, y),
+        Coordinate(x + 1, y)
+    )
 }
 class LaboratoryGuard(var position: Coordinate, var direction: Direction)
 fun Array<CharArray>.toIntArrayWithCoordinates(guard: LaboratoryGuard): Pair<Array<IntArray>, MutableList<Pair<Int, Int>>> {
