@@ -62,11 +62,4 @@ fun main() {
     println("Total reachable summits: $totalSummits")
 }
 
-//czy da sie jakos inaczej sprawdzic czy jestesmy dlaej w polu planszy niz ta funkcja? fun Map<Coordinate, Int>.getHeight(coord: Coordinate): Int {
-//    return this.getOrDefault(coord, Int.MAX_VALUE)
-//}  bardziej w tym stylu fun isInBounds(grid:List<String>, coordinate: Coordinate):Boolean{
-//    val mapXRange=grid.indices
-//    val mapYRange=grid[0].indices
-//
-//    return coordinate.x in mapXRange && coordinate.y in mapYRange
-//}
+
